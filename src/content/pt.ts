@@ -62,9 +62,9 @@ export const pt: Copy = {
     description: "Carvão e lenha de alto desempenho",
     heading: ["Testado", "Fogo", "Aperfeiçoado"],
     stats: [
-      { value: "60", unit: "%", label: "Até\ncustos de combustível" },
+      { value: "60", unit: "%", kicker: "Até", label: "Custos de\ncombustível" },
       { value: "22", unit: "LB", label: "Tudo utilizável\nsem desperdício" },
-      { value: "1", unit: "Árvore", label: "Por caixa\ncom a Veritree" },
+      { value: "1", unit: "", label: "Árvore por caixa\ncom a Veritree" },
     ],
   },
   proof: [

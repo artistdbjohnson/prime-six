@@ -1,4 +1,4 @@
-export type Stat = { value: string; unit: string; label: string };
+export type Stat = { value: string; unit: string; label: string; kicker?: string };
 
 export type Chef = {
   name: string;

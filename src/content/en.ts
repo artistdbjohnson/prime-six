@@ -62,9 +62,9 @@ export const en: Copy = {
     description: "High performing charcoal and wood logs",
     heading: ["Chef-Tested", "Fire", "Perfected"],
     stats: [
-      { value: "60", unit: "%", label: "Up to\nfuel costs" },
+      { value: "60", unit: "%", kicker: "Up to", label: "Fuel\ncosts" },
       { value: "22", unit: "LB", label: "All usable\nno waste" },
-      { value: "1", unit: "Tree", label: "Per case\nwith Veritree" },
+      { value: "1", unit: "", label: "Tree per case\nwith Veritree" },
     ],
   },
   proof: [

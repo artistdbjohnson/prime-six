@@ -71,11 +71,11 @@ export function Hero() {
               variants={fadeUp}
             >
               <p className="font-semibold leading-none text-[#f7f4ef]" style={{ fontSize: "clamp(1.5rem, 5vw, 3.5rem)" }}>
-                {stat.unit === "%" ? (
-                  <span className="mr-1 align-top text-[0.38em] font-semibold tracking-widest text-accent">UP TO</span>
+                {stat.kicker ? (
+                  <span className="mr-1 align-top text-[0.38em] font-semibold tracking-widest text-accent">{stat.kicker} </span>
                 ) : null}
                 {stat.value}
-                <span className="text-[0.45em] text-accent">{stat.unit}</span>
+                {stat.unit ? <span className="text-[0.45em] text-accent">{stat.unit}</span> : null}
               </p>
               <p className="mt-1 whitespace-pre-line text-[10px] font-semibold uppercase leading-tight tracking-widest sm:text-xs md:text-sm">
                 {stat.label}
