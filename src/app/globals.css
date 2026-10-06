@@ -102,8 +102,25 @@ input[type="range"]::-moz-range-thumb {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .ember-ignition {
+    display: none !important;
+  }
+
   .ember-hex {
     animation: none;
     fill: #df5826;
+  }
+}
+
+@media (prefers-reduced-motion: reduce), (scripting: none) {
+  .plate-settle {
+    filter: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  .proof-rule {
+    display: none !important;
   }
 }

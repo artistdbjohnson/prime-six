@@ -21,7 +21,10 @@ const fadeUp = {
 function useEmberReady() {
   const [ready, setReady] = useState(false);
   useEffect(() => {
-    if (document.documentElement.classList.contains("skip-ignition")) {
+    if (
+      document.documentElement.classList.contains("skip-ignition") ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
       setReady(true);
       return;
     }

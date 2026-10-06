@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { PlateSettle } from "./PlateSettle";
 import { useI18n } from "./Providers";
 
 export function WhyExcerpt() {
@@ -59,7 +60,7 @@ export function Chefs() {
   return (
     <section id="chefs" className="border-b border-line px-5 py-16 sm:px-8 md:px-12 md:py-28">
       <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-[0.9fr_1.1fr] md:items-center">
-        <img src="/media/hearth.jpg" alt="" className="aspect-[4/5] w-full object-cover" />
+        <PlateSettle src="/media/hearth.jpg" alt="" className="aspect-[4/5] w-full object-cover" />
         <div>
           <p className="text-[10px] font-semibold uppercase tracking-widest text-accent">{block.kicker}</p>
           <h2 className="mt-3 text-3xl font-semibold uppercase leading-none md:text-5xl">{block.terryName}</h2>

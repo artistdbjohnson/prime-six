@@ -1,12 +1,27 @@
 "use client";
 
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { useI18n } from "./Providers";
+
+const EASE = [0.22, 1, 0.36, 1] as const;
 
 export function ProofRail() {
   const { copy } = useI18n();
   return (
-    <section aria-label="Credibility" className="sticky top-0 z-30 border-b border-line bg-bg">
+    <section aria-label="Credibility" className="relative sticky top-0 z-30 border-b border-line bg-bg">
+      <motion.span
+        aria-hidden="true"
+        className="proof-rule pointer-events-none absolute bottom-0 left-0 z-[1] h-px w-full bg-accent"
+        style={{ originX: 0 }}
+        initial={{ scaleX: 0, opacity: 1 }}
+        whileInView={{ scaleX: 1, opacity: 0 }}
+        viewport={{ once: true, margin: "0px 0px -12% 0px" }}
+        transition={{
+          scaleX: { duration: 0.64, ease: EASE },
+          opacity: { duration: 0.24, delay: 0.64, ease: EASE },
+        }}
+      />
       <ul className="flex flex-wrap gap-2 px-5 py-3 sm:px-8 md:px-12">
         {copy.proof.map((item) => {
           const className =
