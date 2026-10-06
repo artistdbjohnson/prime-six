@@ -102,6 +102,10 @@ input[type="range"]::-moz-range-thumb {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .ember-ignition {
+    display: none !important;
+  }
+
   .ember-hex {
     animation: none;
     fill: #df5826;

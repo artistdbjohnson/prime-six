@@ -22,7 +22,7 @@ const BOOT = `(function(){try{var t=localStorage.getItem("p6-theme");if(t==="dar
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" data-theme="light" className={inter.variable}>
+    <html lang="en" data-theme="light" className={inter.variable} suppressHydrationWarning>
       <body className="font-sans">
         <script dangerouslySetInnerHTML={{ __html: BOOT }} />
         <Providers>

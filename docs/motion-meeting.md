@@ -48,7 +48,9 @@ Two elements. No new intro.
 1. **Plate settle** — `PlateSettle` on `/media/hearth.jpg`, `/media/pizza.jpg`, `/media/lifestyle.jpg`.
 2. **Proof-dock rule** — absolute rule on the home credibility rail. No layout shift. Accent is the existing `#DF5826` token and it does not remain.
 
-`prefers-reduced-motion: reduce` and `scripting: none` force plates sharp and hide the rule. Ignition session-skip is unchanged.
+`prefers-reduced-motion: reduce` and `scripting: none` force plates sharp and hide the rule. The markup does not branch on that preference, so server and client render the same tree. Ignition timing stays 1.15s / 1.55s.
+
+Verification found the boot script’s `skip-ignition` class was wiped when React hydrated `<html class>`. The overlay then played for reduced-motion and for the second visit in a session. `<html suppressHydrationWarning>` keeps the pre-paint class (same pattern as the theme attribute). The ignition and hero also read `matchMedia` themselves, and the reduced-motion stylesheet hides `.ember-ignition`. Not a second open.
 
 ## Copy / brand
 No copy edits. No logo swaps. No font, typeface, color, or chrome changes. Motion is arrival only; the resting page matches the chassis.

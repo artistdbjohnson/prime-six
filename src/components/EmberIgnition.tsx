@@ -12,7 +12,8 @@ export function EmberIgnition() {
       window.dispatchEvent(new Event("p6-ember-done"));
       return;
     }
-    if (document.documentElement.classList.contains("skip-ignition")) {
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (document.documentElement.classList.contains("skip-ignition") || reduce) {
       setPhase("gone");
       window.dispatchEvent(new Event("p6-ember-done"));
       return;
