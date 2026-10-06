@@ -107,3 +107,16 @@ input[type="range"]::-moz-range-thumb {
     fill: #df5826;
   }
 }
+
+@media (prefers-reduced-motion: reduce), (scripting: none) {
+  .plate-settle {
+    filter: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  .proof-rule {
+    display: none !important;
+  }
+}

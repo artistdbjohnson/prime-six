@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { ContactForm } from "./ContactForm";
 import { PageIntro } from "./PageIntro";
+import { PlateSettle } from "./PlateSettle";
 import { SampleBand } from "./HomeSections";
 import { SampleForm } from "./SampleForm";
 import { useI18n } from "./Providers";
@@ -179,7 +180,7 @@ export function ChefsPage() {
       <PageIntro kicker={page.kicker} title={page.title} dek={page.intro} />
       <div className="mx-auto max-w-5xl px-5 py-14 sm:px-8 md:py-20">
         <div className="grid items-start gap-8 md:grid-cols-2">
-          <img src="/media/pizza.jpg" alt="pizza closeup.jpg" className="w-full object-cover" />
+          <PlateSettle src="/media/pizza.jpg" alt="pizza closeup.jpg" className="w-full object-cover" />
           <div>
             <h2 className="text-3xl font-semibold uppercase">{page.frameTitle}</h2>
             {page.frame.map((paragraph) => (
@@ -227,7 +228,7 @@ export function TerryPage() {
     <>
       <PageIntro kicker={copy.terry.kicker} title={copy.terry.title} dek={copy.terry.lead} />
       <div className="mx-auto grid max-w-5xl gap-8 px-5 py-14 sm:px-8 md:grid-cols-[280px_1fr] md:py-20">
-        <img src="/media/lifestyle.jpg" alt="Chef Terry Koval" className="w-full object-cover" />
+        <PlateSettle src="/media/lifestyle.jpg" alt="Chef Terry Koval" className="w-full object-cover" />
         <div>
           {copy.terry.paragraphs.map((paragraph) => (
             <p key={paragraph.slice(0, 24)} className="mt-4 text-sm font-medium leading-relaxed first:mt-0">
